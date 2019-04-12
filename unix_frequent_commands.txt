@@ -1,0 +1,5 @@
+Vim:
+: ,.$-3d  	-> from current to last 3 remove all the lines(d remove the lines)
+u 	-> undo the last command
+G 	-> move to the bottom of a file
+gg 	-> move to the start of a file  
