@@ -1,5 +1,8 @@
 Vim:
-: ,.$-3d  	-> from current to last 3 remove all the lines(d remove the lines)
-u 	-> undo the last command
-G 	-> move to the bottom of a file
-gg 	-> move to the start of a file  
+: ,.$-3d  		-> from current to last 3 remove all the lines(d remove the lines)
+u 		-> undo the last command
+G 		-> move to the bottom of a file
+gg 		-> move to the start of a file  
+:q! 		-> to trash all changes
+:s/old/new/g  	->to substitute 'new' for 'old' where g is globally
+:w test_batch.pl	-> save with name test_batch.pl
