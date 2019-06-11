@@ -1,2 +1,2 @@
 # ml_functions
-This is a depository to save ml models and deep learning models
+common functions so I don't have to google or dig them up from old programms.
