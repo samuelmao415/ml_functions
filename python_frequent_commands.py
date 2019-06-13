@@ -10,10 +10,17 @@ pd.options.display.max_rows = 999
 #read csv
 prolog_rules = pd.read_csv('prolog_rules_error_analysis.csv', sep="\t")
 combined_set.to_csv('prolog_rules_error_analysis.csv', sep='\t', index = False)
-
 #read txt
 data = pd.read_csv('theyes_email.txt', sep=" ", header=None)
 data.columns = ["email_provided"]
+#read excel
+pd.read_excel('coed_email_list.xlsx')
+
+#list comprehension with multiple if else
+def extract_username(x):
+    return (['None' if re.search('(.*)@.*',u) == None else re.search('(.*@.*)',u).group(1) if re.search('(.*@.*)@.*',u)== None else re.search('(.*@.*)@.*',u).group(1) for u in x])
+extract_username(finery_user_data.email_provided)
+finery_user_data['user_name_extracted'] = extract_username(finery_user_data.email_provided)
 
 #regex sub in a dataframe
 toy.alltext=toy.alltext.apply(lambda x: re.sub("(\d+\%)+([a-z]+)|([a-z]+)+(\d+\%)", "\\2  \\2\\1  \\3  \\3\\4",x))
